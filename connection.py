@@ -3,7 +3,8 @@ import psycopg2
 
 class Connection:
 
-    def __init__(self, host, dbname, user, password):
+    def __init__(self, host="127.0.0.1", dbname="spaceflightnews",
+                 user="postgres", password="password"):
         self.host = host
         self.dbname = dbname
         self.user = user
@@ -16,7 +17,7 @@ class Connection:
     def connect(self):
         conn_pars = f"host = {self.host} dbname = {self.dbname}" \
                     f" user = {self.user} password = {self.password}"
-        # conn_pars = "user:pass@ip:port/database"
+        # alternative notation: conn_pars = "user:pass@ip:port/database"
         conn = psycopg2.connect(conn_pars)
         cur = conn.cursor()
         return [conn, cur]
