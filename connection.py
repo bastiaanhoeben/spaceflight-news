@@ -25,3 +25,4 @@ class Connection:
     def close_conn(self, conn, cur):
         cur.close()
         conn.close()
+        return f"Connection to {self.dbname} closed"

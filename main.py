@@ -13,15 +13,12 @@ def update_database():
 
     # print connection confirmation message
     print(f"Connecting to database with the following parameters:\n"
-          f"Host: {connection.host} Database: {connection.dbname} "
+          f"Host: {connection.host}, Database: {connection.dbname}, "
           f"User: {connection.user}")
 
     # create table if no same exists
     table = Table('newsfeed')
     table.create_table(conn, cur)
-
-    # print table creation message
-    print("Newsfeed table created.")
 
     # extract latest articles from Spaceflight News in json file
     number_of_articles = input("How many latests articles would you like to "
@@ -37,8 +34,6 @@ def update_database():
     # close cursor and connection
     connection.close_conn(conn, cur)
 
-    # print connection closure message
-    print("Connection to database closed")
 
 if __name__ == '__main__':
     update_database()
