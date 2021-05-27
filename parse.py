@@ -2,11 +2,12 @@ from psycopg2 import sql
 
 
 class Parse:
-
+    """Class for parsing retrieved data files"""
     def __init__(self, file):
         self.file = file
 
     def parsing_json(self, conn, cur, tbname):
+        """Parses a json file and inserts data into the provided table"""
         countold = 0
         countnew = 0
         for article in self.file:
