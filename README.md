@@ -45,4 +45,4 @@ To get the environment running on your system, go through the following steps:
 The data retrieved from the Spaceflight News API is saved in the PostgreSQL 
 database in the following table format:
 
-![ERD](spaceflightnews_ERD.png)
+![ERD](docs/spaceflightnews_ERD.png)
