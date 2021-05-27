@@ -12,7 +12,7 @@ def update_database():
     cur = conn_instance[1]
 
     # print connection confirmation message
-    print(f"Connecting to database with the following parameters:\n"
+    print(f"\nConnecting to database with the following parameters:\n"
           f"Host: {connection.host}, Database: {connection.dbname}, "
           f"User: {connection.user}")
 
@@ -37,7 +37,7 @@ def update_database():
 
 if __name__ == '__main__':
     while True:
-        user_input = input("Would you like to save new articles to database? y/n: ").lower()
+        user_input = input("\nWould you like to save new articles to database? y/n: ").lower()
         if user_input == 'y':
             update_database()
         elif user_input == 'n':
