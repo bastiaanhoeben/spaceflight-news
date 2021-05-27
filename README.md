@@ -1,9 +1,9 @@
 ## Spaceflight News Retrieval
 
 ### Overview
-The goal of this project is to retrieve the latest space flight news from the
-[Spaceflight News API](www.spaceflightnewsapi.net) and write it to a 
-PostgreSQL database.
+The goal of this project is to retrieve links to the latest space flight news 
+articles from the [Spaceflight News API](www.spaceflightnewsapi.net) and write 
+it to a PostgreSQL database.
 
 ### Getting started
 
@@ -39,3 +39,10 @@ To get the environment running on your system, go through the following steps:
    ```
    python main.py
    ```
+
+### Data format
+
+The data retrieved from the Spaceflight News API is saved in the PostgreSQL 
+database in the following table format:
+
+![ERD](spaceflightnews_ERD.png)
