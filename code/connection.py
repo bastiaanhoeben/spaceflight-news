@@ -3,7 +3,7 @@ import psycopg2
 
 class Connection:
     """Class for handling database connections"""
-    def __init__(self, host="127.0.0.1", dbname="spaceflightnews",
+    def __init__(self, host="postgres", dbname="spaceflightnews",
                  user="postgres", password="password"):
         self.host = host
         self.dbname = dbname
