@@ -33,5 +33,5 @@ class Parse:
                 conn.commit()
                 countnew = countnew + 1
 
-        print(f"{countnew} newly added articles")
+        print(f"\n{countnew} newly added articles")
         print(f"{countold} old articles skipped")

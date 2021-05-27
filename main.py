@@ -21,7 +21,7 @@ def update_database():
     table.create_table(conn, cur)
 
     # extract latest articles from Spaceflight News in json file
-    number_of_articles = input("How many latests articles would you like to "
+    number_of_articles = input("\nHow many latests articles would you like to "
                         "retrieve? ")
     url = 'https://spaceflightnewsapi.net/api/v2/articles'
     retrieval_order = Retrieval(url)

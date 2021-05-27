@@ -12,5 +12,5 @@ class Retrieval:
         fhand = requests.get(full_url)
         data = fhand.text
         js = json.loads(data)
-        print(f"{len(js)} articles retrieved")
+        print(f"\n{len(js)} articles retrieved")
         return js
