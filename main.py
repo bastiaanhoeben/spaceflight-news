@@ -36,5 +36,12 @@ def update_database():
 
 
 if __name__ == '__main__':
-    update_database()
+    while True:
+        user_input = input("Would you like to save new articles to database? y/n: ").lower()
+        if user_input == 'y':
+            update_database()
+        elif user_input == 'n':
+            break
+        else:
+            print("Please input 'y' or 'n'.")
 
