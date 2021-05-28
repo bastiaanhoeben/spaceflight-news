@@ -18,26 +18,15 @@ To get the environment running on your system, go through the following steps:
    cd spaceflight-news
    ```
    
-2. Start up the database service and service dependencies:
+2. Start up the database service in the background and build the python 
+   application:
    ```
-   docker-compose up
-   ```
-
-3. Create a virtual environment and activate it:
-   ```
-   python -m venv spaceflight-news
-   ```
-   ```
-   source spaceflight-news/bin/activate
-   ```
-4. Install the necessary packages from requirements.txt:
-   ```
-   python -m pip install -r requirements.txt
+   docker-compose up -d
    ```
 
-5. Run the python script and follow the instructions prompted for:
+3. Run the python application and follow the instructions prompted for:
    ```
-   python main.py
+   docker-compose run app main.py
    ```
 
 ### Data format
